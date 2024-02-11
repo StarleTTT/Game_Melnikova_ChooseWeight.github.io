@@ -1,0 +1,276 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+  
+  }
+  body{
+    
+    height: 100%;
+    width:  100%;
+    background-repeat: no-repeat;
+    background-size: cover ;
+        max-height: 100%;
+  }
+  .username{
+    border: 2px black;
+  }
+  .wrapper{
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  
+.count{
+  position: relative;
+  height: 50px;
+    display: flex;
+    flex-direction:row;
+    margin: auto;
+    justify-content: center;
+}
+.settings{
+  position: relative;
+  display: flex;
+  flex-direction:row;
+  
+}
+.countK{  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #bdbdbd;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;}
+.scores{
+  padding-right: 40px;
+  display: flex;
+  flex-direction:row;
+}
+  .content{
+
+    margin: auto;
+    display: flex;
+    flex-direction:row;
+    max-width: 1000px;
+      height: 400px;
+      border: 2px black;
+      background-image: url('лево.jpg') ;
+      justify-content: center;
+      background-size: 80%; 
+      background-repeat: no-repeat;
+      background-position: right 50% bottom 0%;
+  }
+  .name {
+    margin: auto;
+    padding: 20px;
+    width: fit-content;
+    border: 2px #333;
+  }
+  .set1{
+    position: relative;
+    display: flex;
+    flex-direction:row;
+  }
+.left_block{
+    position: relative;
+    width: 45%;
+    height: 400px;
+   
+}
+
+.right_block{
+    position: relative;
+    width: 45%;
+    height: 400px;
+  
+}
+.table{
+    position: relative;
+    margin: auto;
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap ;
+    align-content: center;
+    width: 90%;
+    height: 500px;
+
+    background: rgb(92, 73, 51);
+    justify-content: space-evenly;
+}
+.kettlebell{
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: transparent;
+}
+
+
+.image-container {
+  position: relative;
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+}
+
+.image-container img {
+  display: block;
+  margin: 0 auto;
+  height: 100px;
+  width: 100px;
+}
+
+.image-container span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px; 
+  color: white; 
+  font-weight: bold; }
+
+.move {
+
+  
+  cursor: grab;
+  user-select: none;
+}
+.moved{
+  opacity: .3;
+  border: 2px solid #3ccc43;
+}
+.question{
+  height: 50px;
+}
+.content2{
+  max-width: 1000px;
+  margin: auto;
+      height: 1000px;
+      border: 2px black;
+      background-color: bisque ;}
+
+.elem1{
+  position: absolute;
+  background-image: url('перо.png');
+  background-size: 100px;
+  background-repeat: no-repeat;
+  height: 100px;
+  width: 100px;
+}
+.elem2{
+  position: absolute;
+  background-image: url('карандаш.png');
+  background-size: 100px;
+  background-repeat: no-repeat;
+  height: 150px;
+  width: 100px;
+}
+.elem3{
+  position: absolute;
+  background-image: url('книга.png');
+  background-size: 100px;
+  background-repeat: no-repeat;
+  height: 100px;
+  width: 100px;
+}
+.elem4{
+  position: absolute;
+  background-image: url('тв.png');
+  background-size: 100px;
+  background-repeat: no-repeat;
+  height: 100px;
+  width: 100px;
+}
+.elem5{
+  position: absolute;
+  background-image: url('холодильник.png');
+  background-size: 100px;
+  background-repeat: no-repeat;
+  height: 100px;
+  width: 100px;
+}
+.elem6{
+  position: absolute;
+  background-image: url('машина.png');
+  background-size: 100px;
+  background-repeat: no-repeat;
+  height: 100px;
+  width: 100px;
+}
+.animate-elements .elem1
+{
+  animation: moveElement1 10s linear infinite;
+}
+.animate-elements .elem4{
+  animation: moveElement1 5s linear infinite;
+}
+.animate-elements .elem5{
+  animation: moveElement2 2s linear infinite;
+}
+.animate-elements .elem3{
+  animation: moveElement2 5s linear infinite;
+}
+.animate-elements .elem6
+{
+    animation: moveElement3 2s linear infinite;
+}
+.animate-elements .elem2
+{
+  animation: moveElement3 6s linear infinite;
+}
+
+
+@keyframes moveElement1 {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(-110px, 400px); /* Измените это значение по вашему усмотрению */
+    }
+    70% {
+        transform: translate(-60px, 20);
+    }
+    100%{
+      transform: translate(0, 0);
+    }
+}
+
+@keyframes moveElement2 {
+  0% {
+      transform: translate(0, 0);
+  }
+  20%{
+    transform: translate(60, 0);
+  }
+  50% {
+      transform: translate(-250px, -50px); /* Измените это значение по вашему усмотрению */
+  }
+  70% {
+      transform: translate(-100px, 0);
+  }
+  100%{
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes moveElement3 {
+  0% {
+      transform: translate(0, 0);
+  }
+  50% {
+      transform: translate(150px, 50px); /* Измените это значение по вашему усмотрению */
+  }
+  70% {
+      transform: translate(50px, -12px);
+  }
+  100%{
+    transform: translate(0, 0);
+  }
+}
+
+
+
+
+.answer{
+  display: none;
+}

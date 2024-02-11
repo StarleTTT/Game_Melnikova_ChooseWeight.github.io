@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Маркет всех товаров</title>
+    <link href='курсач.css' rel="stylesheet"> 
+    
+</head>
+<body>
+    <div class="wrapper">
+        <div class="back"  >
+        <div id = "count" class = "count">
+            <div class = "scores">
+                Счет: <div id="countDisplay"> </div>
+            </div>
+                <button type="submit" onclick="end()">закончить</button>  
+                <div id = "start" class="starts" style="display: none;"><button type="submit" onclick="  startGame()">начать</button></div>
+                <div class = "settings"> <div></div> 
+                <div  id ="set1" class="set1">
+                    <form id = "setK" onsubmit="settings()">
+                    <label for="countK">Количество гирек</label><br>
+                    <input class="countK" type = "text" name = "countK" id="countK" placeholder="Количество гирек"><br>
+                    </form>
+                    <form id = "setW" style="display: none;" onsubmit="settings1()">
+                    <label for="countW">Максимально возможное значение</label><br>
+                    <input class="countW" type = "text" name = "countW" id="countW" placeholder="Значение"><br></div>
+                </form>
+                </div>
+                <div id="timer" class = "timer"></div>
+        </div>
+        <div id = "content" class = "content">
+        <div id="left_block" class="left_block"> </div>
+        <div id="right_block" class="right_block"> </div>
+        </div>
+        <form class="answer" id = "answer" onsubmit="answer()">
+            <label for="countW">Сколько весит гиря?</label><br>
+            <input  type = "text" name = "countW" id="countW" placeholder="Значение"><br></div>
+        </form>
+         </div>
+    </div>
+    <script src="3уровень.js"></script>
+</body>
