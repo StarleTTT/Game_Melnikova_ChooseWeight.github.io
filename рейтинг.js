@@ -9,4 +9,4 @@ users.forEach(function(users){
 }
     )
    function alerted(){
-        window.location.href = "авторизация.html";}
+        window.location.href = "index.html";}

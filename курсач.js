@@ -82,7 +82,7 @@ function finishWin(){
     event.preventDefault();
     flagWin = true
    // removeElementsByClass('timer');
-   alert("Поздравляем!")
+  // alert("Поздравляем!")
        // window.location.href = "2уровень.html";
        let cont = document.createElement('button');
     cont.addEventListener('click', () => {
