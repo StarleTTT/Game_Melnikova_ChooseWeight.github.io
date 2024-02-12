@@ -66,8 +66,10 @@
       background-position: right 50% bottom 0%;
   }
   .name {
+    font-size: large;
     margin: auto;
-    padding: 20px;
+
+    padding-top: 20%;
     width: fit-content;
     border: 2px #333;
   }
@@ -294,3 +296,11 @@
 .tab{
   text-align: center; 
 }
+
+
+.content0{
+  max-width: 1000px;
+  margin: auto;
+      height: 700px;
+      border: 2px black;
+      background-color: bisque ;}
