@@ -225,7 +225,7 @@
         transform: translate(0, 0);
     }
     50% {
-        transform: translate(-110px, 400px); /* Измените это значение по вашему усмотрению */
+        transform: translate(-110px, 400px);
     }
     70% {
         transform: translate(-60px, 20);
@@ -243,7 +243,7 @@
     transform: translate(60, 0);
   }
   50% {
-      transform: translate(-250px, -50px); /* Измените это значение по вашему усмотрению */
+      transform: translate(-250px, -50px); 
   }
   70% {
       transform: translate(-100px, 0);
@@ -258,7 +258,7 @@
       transform: translate(0, 0);
   }
   50% {
-      transform: translate(150px, 50px); /* Измените это значение по вашему усмотрению */
+      transform: translate(150px, 50px);
   }
   70% {
       transform: translate(50px, -12px);
