@@ -1,6 +1,6 @@
 const EASY_PHRASE = ["Выбери самый легкий предмет",
-                "Выбери самый тяжелый предмет", "выбери любой предмет легче книги",
-               "выбери предмет тяжелее телевизора"];
+                "Выбери самый тяжелый предмет", "Выбери любой предмет легче книги",
+               "Выбери предмет тяжелее телевизора"];
 var suppPhrase = new Array();
 var diff = 0;
 var balance = 0;
@@ -18,14 +18,14 @@ var flagRaund = 0 ;
 var flagWin = false;
 var modif = 0;
 function time(){
-    var count = 15
-var counter=setInterval(timer, 1000); //1000 will  run it every 1 second
+    var count = 30
+var counter=setInterval(timer, 1000);
 function timer()
 {
    if (flagWin) {count=count}else{
  count=count-1;
  if ( document.getElementById("timer")) {
- document.getElementById("timer").innerHTML = count
+ document.getElementById("timer").innerHTML = count + " секунд"
  if (count <= 0)
  {
     clearInterval(counter);
@@ -67,6 +67,12 @@ function finishWin(){
 }
 
 function finishLose(){
+   removeElementsByClass('elem1');
+   removeElementsByClass('elem2');
+   removeElementsByClass('elem3');
+   removeElementsByClass('elem4');
+   removeElementsByClass('elem5');
+   removeElementsByClass('elem6');
    removeElementsByClass('timer');
    removeElementsByClass('image-container');
    removeElementsByClass('starts');
@@ -116,7 +122,7 @@ function startLevel() {
        var containerTop = contentContainer.offsetTop;
 
          img.style.left = Math.max(containerLeft+250, Math.min( containerLeft + contentContainer.clientWidth - img.clientWidth -250,containerLeft + getRandomInt(contentContainer.clientWidth - img.clientWidth))) + 'px';
-       img.style.top =  Math.max(50, Math.min(contentContainer.clientHeight-400, containerTop + getRandomInt(contentContainer.clientHeight - img.clientHeight-100))) + 'px';
+       img.style.top =  Math.max(150, Math.min(contentContainer.clientHeight-400, containerTop + getRandomInt(contentContainer.clientHeight - img.clientHeight-100))) + 'px';
         contentContainer.appendChild(img);
         img.addEventListener('mousedown', getWeight);
    });

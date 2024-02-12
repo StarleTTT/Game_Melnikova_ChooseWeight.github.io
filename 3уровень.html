@@ -14,16 +14,16 @@
             <div class = "scores">
                 Счет: <div id="countDisplay"> </div>
             </div>
-                <button type="submit" onclick="end()">закончить</button>  
-                <div id = "start" class="starts" style="display: none;"><button type="submit" onclick="  startGame()">начать</button></div>
+                <button type="submit" class="top" onclick="end()">закончить</button>  
+                <button  id = "start" class="starts" style="display: none;" type="submit" onclick="  startGame()">начать</button>
                 <div class = "settings"> <div></div> 
                 <div  id ="set1" class="set1">
                     <form id = "setK" onsubmit="settings()">
-                    <label for="countK">Количество гирек</label><br>
+                    <label for="countK">Введите количество гирек</label><br>
                     <input class="countK" type = "text" name = "countK" id="countK" placeholder="Количество гирек"><br>
                     </form>
                     <form id = "setW" style="display: none;" onsubmit="settings1()">
-                    <label for="countW">Максимально возможное значение</label><br>
+                    <label for="countW">Максимально возможный вес</label><br>
                     <input class="countW" type = "text" name = "countW" id="countW" placeholder="Значение"><br></div>
                 </form>
                 </div>

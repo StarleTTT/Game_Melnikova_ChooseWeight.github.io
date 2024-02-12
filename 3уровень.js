@@ -44,7 +44,7 @@ event.preventDefault();
 var countK = document.getElementById('countK').value;
 let warning = document.querySelector(".count");
 let textName = warning.querySelector("label");
-if (countK >= 2 && countK <= 10 ) {
+if (countK >= 2 && countK <= 8 ) {
     console.log("work") 
     possibilityI = countK
     textName.textContent = "Значение принято";
@@ -53,7 +53,7 @@ if (countK >= 2 && countK <= 10 ) {
     var e2 = document.getElementById("setW");
     e2.style.display = "block"
     modif = modif+ countK/2
-} else {  alert("Значение должно быть от 2 до 10")}
+} else {  alert("Значение должно быть от 2 до 8")}
 
 
 }
@@ -63,7 +63,7 @@ function settings1(  ) {
     var countW = document.getElementById('countW').value;
     let warning = document.querySelector(".count");
     let textName = warning.querySelector("label");
-    if (countW >= 2 && countW <= 100 ) {
+    if (countW >= 2 && countW <= 30 ) {
         console.log("work") 
         maxCount = countW
         textName.textContent = "Значение принято";
@@ -72,13 +72,13 @@ function settings1(  ) {
         var e2 = document.getElementById("start");
         e2.style.display = "block"
         modif = modif+ maxCount/2
-    } else {  alert("Значение должно быть от 2 до 100")}
+    } else {  alert("Значение должно быть от 2 до 30")}
     }
 
 
 
 function time(){
-     var count = 15
+     var count = 30
 var counter=setInterval(timer, 1000);
 function timer()
 {
@@ -86,7 +86,7 @@ function timer()
   count=count-1;
 
   if ( document.getElementById("timer")) {
-    document.getElementById("timer").innerHTML = count
+    document.getElementById("timer").innerHTML = count + " секунд"
   if (count <= 0)
   {
      clearInterval(counter);
@@ -108,7 +108,7 @@ function startGame(){
     el.style.backgroundImage = "url('середина.png')" 
     if (flagRaund == null ) {flagRaund = 0}
     var e2 = document.getElementById("answer");
-    e2.style.display = "block"
+    e2.style.display = "flex"
 console.log(flagRaund +"flag")
 flagRaund +=1
 console.log(flagRaund)
@@ -126,6 +126,7 @@ else{
 }}
 
 function finishWin(){
+    removeElementsByClass('answer')
     event.preventDefault();
     flagWin = true
     var e2 = document.getElementById("timer");
@@ -141,6 +142,7 @@ function finishWin(){
       
 }
 function finishLose(){
+
     var e2 = document.getElementById("timer");
     e2.style.display = "none"
     removeElementsByClass('image-container');

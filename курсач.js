@@ -34,7 +34,7 @@ console.log("неправильное поле");}
 
 
 function time(){
-    var count = 15
+    var count = 30
 var counter=setInterval(timer, 1000);
 function timer()
 {
@@ -81,9 +81,6 @@ else{
 function finishWin(){
     event.preventDefault();
     flagWin = true
-   // removeElementsByClass('timer');
-  // alert("Поздравляем!")
-       // window.location.href = "2уровень.html";
        let cont = document.createElement('button');
     cont.addEventListener('click', () => {
         window.location.href = "2уровень.html";
@@ -93,7 +90,6 @@ function finishWin(){
       
 }
 function finishLose(){
-   // removeElementsByClass('timer');
     removeElementsByClass('image-container');
     removeElementsByClass('starts');
    alert("попробуйте заново!")
@@ -128,10 +124,10 @@ function finishLose(){
     var i = Array.from({ length: possibilityI }, (_, index) => index + 1);
     
     i.forEach(function (value) {
-        var imgContainer = document.createElement('div'); // Обертка для изображения и текста
+        var imgContainer = document.createElement('div'); 
       
         if (value != rand1 && value !=rand2){
-        imgContainer.classList.add('move'); // Добавление класса move
+        imgContainer.classList.add('move'); 
         
         }
          imgContainer.classList.add('image-container');
@@ -165,7 +161,6 @@ function finishLose(){
             }
 
             obj.style.cursor = "grabbing";
-            //const rect = obj.getBoundingClientRect();
             offsetX = e.clientX ;
             offsetY = e.clientY;
             
@@ -179,7 +174,6 @@ function finishLose(){
                 obj.style.left = 0;
                 obj.style.top = 0
             }
-            //console.log("check")
             checkWeight();
         }
 
@@ -189,7 +183,6 @@ function finishLose(){
                 let newY = e.clientY - offsetY;
                 obj.style.left = newX + "px";
                 obj.style.top = newY + "px";
-               // console.log( e.clientY )
                 if (e.clientX >document.body.clientWidth/2 && e.clientX < Math.min(document.body.clientWidth/2+450, document.body.clientWidth*0.95 )
                     && e.clientY > 50 && e.clientY < 450){
                     obj.classList.add('moved');
@@ -234,7 +227,7 @@ function finishLose(){
                     var storedData = localStorage.getItem('users');
                     var users = JSON.parse(storedData) || [];
                     var current_user = users[users.length-1];
-                    current_user.count += (1* modif);
+                    current_user.count += Math.round(modif);
                     document.getElementById('countDisplay').textContent = current_user.count ;
             
                     var json = JSON.stringify(users);
