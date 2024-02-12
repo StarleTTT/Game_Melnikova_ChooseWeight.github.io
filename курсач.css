@@ -15,6 +15,7 @@
   }
   .username{
     border: 2px black;
+    color: yellow;
   }
   .wrapper{
     min-height: 100%;
@@ -66,12 +67,13 @@
       background-position: right 50% bottom 0%;
   }
   .name {
+    color: rgb(218, 142, 55);
     font-size: large;
+    font-style: bold;
     margin: auto;
+    padding-top: 13%;
 
-    padding-top: 20%;
-    width: fit-content;
-    border: 2px #333;
+   
   }
   .set1{
     position: relative;
@@ -298,9 +300,3 @@
 }
 
 
-.content0{
-  max-width: 1000px;
-  margin: auto;
-      height: 700px;
-      border: 2px black;
-      background-color: bisque ;}
