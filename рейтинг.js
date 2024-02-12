@@ -1,8 +1,6 @@
 document.addEventListener('DOMContentLoaded', function(){
     var storedData = localStorage.getItem('users');
     var users = JSON.parse(storedData);
-
-    // Сортировка пользователей по убыванию значения count
     users.sort((a, b) => b.count - a.count);
 
     users.forEach(function(user){
